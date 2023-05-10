@@ -4,6 +4,6 @@ import { BuildOptions } from "./types/config";
 export function buildDevServer({ port }: BuildOptions): Configuration {
   return {
     port,
-    open: true,
+    open: false,
   }
 }
