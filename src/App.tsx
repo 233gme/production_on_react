@@ -6,13 +6,14 @@ import "./styles/index.scss";
 import MainPage from "./pages/Main";
 import AboutPage from "./pages/About";
 import { useTheme } from "./theme/ToggleTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
-      <button onClick={toggleTheme}>ZZZ</button>
+    <div className={classNames("app", {}, [theme])}>
+      <button onClick={toggleTheme}>[ZZZ]</button>
       <Link to={"/"}>Main</Link>
       <Link to={"/about"}>About</Link>
       <Suspense fallback={<div>Loading...</div>}>
