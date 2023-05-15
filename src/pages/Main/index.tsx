@@ -1,5 +1,1 @@
-const MainPage = () => {
-  return <div>MainPage</div>;
-};
-
-export default MainPage;
+export { MainPageAsync as MainPage } from "./ui/MainPage.async";
