@@ -1,17 +1,18 @@
-import { useTheme } from "app/providers/ThemeProviders/lib/ToggleTheme";
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "app/providers/Routers";
 import { Navbar } from "widgets/Navbar";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import { useTheme } from "./providers/ThemeProviders";
 
 import "./styles/index.scss";
 
 function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-      <button onClick={toggleTheme}>[ZZZ]</button>
+      <ThemeSwitcher />
       <AppRouter />
     </div>
   );
