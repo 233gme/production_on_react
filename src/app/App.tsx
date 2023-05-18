@@ -5,17 +5,20 @@ import { useTheme } from "./providers/ThemeProviders";
 import { Sidebar } from "widgets/Sidebar";
 
 import "./styles/index.scss";
+import { Suspense } from "react";
 
 function App() {
   const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <Navbar />
-      <div className="content-page">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 }
