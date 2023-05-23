@@ -1,8 +1,8 @@
-import { Suspense } from "react";
-import { Routes, Route } from "react-router";
-import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import { type FC, Suspense } from 'react'
+import { Route, Routes } from 'react-router'
+import { routeConfig } from 'shared/config/routeConfig/routeConfig'
 
-const AppRouter = () => {
+const AppRouter: FC = () => {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
@@ -17,7 +17,7 @@ const AppRouter = () => {
         </Routes>
       </Suspense>
     </div>
-  );
-};
+  )
+}
 
-export default AppRouter;
+export default AppRouter

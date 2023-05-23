@@ -1,33 +1,35 @@
-import {DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance} from "webpack";
+import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, type WebpackPluginInstance } from 'webpack'
 
-import {BuildOptions} from "./types/config";
+import { type BuildOptions } from './types/config'
 
-import HTMLWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
-export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstance[] {
+// NEED RESOLVE
+// import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+
+export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
   const plugins = [
     new HTMLWebpackPlugin({
-      template: paths.html,
+      template: paths.html
     }),
     new ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contentnash:8].css",
-      chunkFilename: "css/[name].[contentnash:8].css",
+      filename: 'css/[name].[contentnash:8].css',
+      chunkFilename: 'css/[name].[contentnash:8].css'
     }),
     new DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev),
-    }),
-  ];
-  
+      IS_DEV: JSON.stringify(isDev)
+    })
+  ]
+
   if (isDev) {
     return [
       ...plugins,
-      new ReactRefreshPlugin(),
-      new HotModuleReplacementPlugin(),
-    ];
+      // new ReactRefreshPlugin(),
+      new HotModuleReplacementPlugin()
+    ]
   } else {
-    return plugins;
+    return plugins
   }
 }
