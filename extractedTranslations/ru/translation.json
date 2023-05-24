@@ -1,7 +1,11 @@
 {
+  "Loading": "",
+  "NotFoundPage": "",
   "about": "",
   "langSwitcherBtn": "",
+  "loading": "",
   "main": "",
   "navbarLinkAbout": "",
-  "navbarLinkMain": ""
+  "navbarLinkMain": "",
+  "notFoundPage": ""
 }
