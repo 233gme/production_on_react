@@ -1,29 +1,26 @@
-import { Suspense } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { type FC, Suspense } from 'react'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { AppRouter } from 'app/providers/Routers'
+import { Navbar } from 'widgets/Navbar'
+import { useTheme } from './providers/ThemeProviders'
+import { Sidebar } from 'widgets/Sidebar'
 
-import "./styles/index.scss";
+import './styles/index.scss'
 
-import { MainPage } from "pages/Main";
-import { AboutPage } from "pages/About";
-import { useTheme } from "app/providers/ThemeProviders/lib/ToggleTheme";
-import { classNames } from "shared/lib/classNames/classNames";
-
-function App() {
-  const { theme, toggleTheme } = useTheme();
+const App: FC = () => {
+  const { theme } = useTheme()
 
   return (
-    <div className={classNames("app", {}, [theme])}>
-      <button onClick={toggleTheme}>[ZZZ]</button>
-      <Link to={"/"}>Main</Link>
-      <Link to={"/about"}>About</Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path={"/about"} element={<AboutPage />} />
-          <Route path={"/"} element={<MainPage />} />
-        </Routes>
+    <div className={classNames('app', {}, [theme])}>
+      <Suspense fallback="">
+        <Navbar/>
+        <div className="content-page">
+          <Sidebar/>
+          <AppRouter/>
+        </div>
       </Suspense>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

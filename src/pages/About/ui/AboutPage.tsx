@@ -1,5 +1,9 @@
-const AboutPage = () => {
-  return <div>AboutPage</div>;
-};
+import { type FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
-export default AboutPage;
+const AboutPage: FC = () => {
+  const { t } = useTranslation('aboutPage')
+  return <div>{t('about')}</div>
+}
+
+export default AboutPage
