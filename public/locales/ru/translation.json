@@ -2,5 +2,7 @@
   "navbarLinkMain": "Главная",
   "navbarLinkAbout": "О сайте",
   "langSwitcherBtn": "ENG",
-  "notFoundPage": "Страница не найдена"
+  "notFoundPage": "Страница не найдена",
+  "somethingWentWrong": "Что-то пошло не так",
+  "reboot": "Обновить страницу"
 }
