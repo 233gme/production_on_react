@@ -2,7 +2,7 @@ import { type FC, Suspense } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { AppRouter } from 'app/providers/Routers'
 import { Navbar } from 'widgets/Navbar'
-import { useTheme } from './providers/ThemeProviders'
+import { useTheme } from './providers/ThemeProvider'
 import { Sidebar } from 'widgets/Sidebar'
 
 import './styles/index.scss'

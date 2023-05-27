@@ -7,7 +7,7 @@ import { Button } from 'shared/ui/Button/Button'
 import cls from './LangSwitcher.module.scss'
 
 import LangIcon from 'shared/assets/icons/language.svg'
-import { Theme, useTheme } from 'app/providers/ThemeProviders'
+import { Theme, useTheme } from 'app/providers/ThemeProvider'
 import { type TFunction } from 'i18next'
 
 interface LangSwitcherProps {

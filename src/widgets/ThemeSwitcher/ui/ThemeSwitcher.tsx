@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Theme, useTheme } from 'app/providers/ThemeProviders'
+import { Theme, useTheme } from 'app/providers/ThemeProvider'
 
 import cls from './ThemeSwitcher.module.scss'
 
