@@ -4,11 +4,14 @@ import { type BuildOptions } from './types/config'
 
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 // NEED RESOLVE
 // import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
-export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins (
+  { paths, isDev }: BuildOptions
+): WebpackPluginInstance[] {
   const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html
@@ -20,7 +23,8 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInst
     }),
     new DefinePlugin({
       IS_DEV: JSON.stringify(isDev)
-    })
+    }),
+    new BundleAnalyzerPlugin({ openAnalyzer: false })
   ]
 
   if (isDev) {
