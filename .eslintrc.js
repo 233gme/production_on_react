@@ -9,7 +9,6 @@ module.exports = {
     'standard-with-typescript',
     'plugin:i18next/recommended'
   ],
-  overrides: [],
   parserOptions: {
     project: ['./tsconfig.json']
   },
@@ -20,10 +19,21 @@ module.exports = {
     'react/jsx-indent': [2, 2],
     '@typescript-eslint/strict-boolean-expressions': 0,
     'react/react-in-jsx-scope': 0,
-    'i18next/no-literal-string': [2, { markupOnly: true }],
+    'i18next/no-literal-string': [2, {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid']
+    }],
     'max-len': [2, { code: 120, ignoreComments: true }],
     // REMOVE THIS RULE
     '@typescript-eslint/no-misused-promises': 0,
     '@typescript-eslint/ban-ts-comment': 0
-  }
+  },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off'
+      }
+    }
+  ]
 }
