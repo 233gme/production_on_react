@@ -23,15 +23,15 @@ export function buildPlugins (
     }),
     new DefinePlugin({
       IS_DEV: JSON.stringify(isDev)
-    }),
-    new BundleAnalyzerPlugin({ openAnalyzer: false })
+    })
   ]
 
   if (isDev) {
     return [
       ...plugins,
       // new ReactRefreshPlugin(),
-      new HotModuleReplacementPlugin()
+      new HotModuleReplacementPlugin(),
+      new BundleAnalyzerPlugin({ openAnalyzer: false })
     ]
   } else {
     return plugins

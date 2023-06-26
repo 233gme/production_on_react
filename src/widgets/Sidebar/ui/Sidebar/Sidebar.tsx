@@ -26,7 +26,7 @@ export const Sidebar: FC<SidebarProps> = ({ className, children }) => {
         data-testid={'sidebar-toggle-btn'}
         onClick={onToggleCollapsed}
       >
-        WWW
+        123
       </button>
       <div className={cls.switchers}>
         <ThemeSwitcher/>
