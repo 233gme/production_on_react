@@ -2,10 +2,13 @@
   "Loading": "",
   "NotFoundPage": "",
   "about": "",
+  "lang": "",
   "langSwitcherBtn": "",
   "loading": "",
   "main": "",
   "navbarLinkAbout": "",
   "navbarLinkMain": "",
-  "notFoundPage": ""
+  "notFoundPage": "",
+  "reboot": "",
+  "somethingWentWrong": ""
 }

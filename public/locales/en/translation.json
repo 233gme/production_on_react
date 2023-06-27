@@ -2,5 +2,8 @@
   "navbarLinkMain": "Main",
   "navbarLinkAbout": "About",
   "langSwitcherBtn": "RUS",
-  "notFoundPage": "Page not found"
+  "notFoundPage": "Page not found",
+  "somethingWentWrong": "Something went wrong",
+  "reboot": "Refresh the page",
+  "lang": "РУС"
 }

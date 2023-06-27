@@ -7,14 +7,15 @@ import { Button } from 'shared/ui/Button/Button'
 import cls from './LangSwitcher.module.scss'
 
 import LangIcon from 'shared/assets/icons/language.svg'
-import { Theme, useTheme } from 'app/providers/ThemeProviders'
+import { Theme, useTheme } from 'app/providers/ThemeProvider'
 import { type TFunction } from 'i18next'
 
 interface LangSwitcherProps {
   className?: string
+  showIcon?: boolean
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = () => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({ className, showIcon = false }) => {
   const { t, i18n } = useTranslation()
   const { theme } = useTheme()
 
@@ -24,7 +25,9 @@ export const LangSwitcher: FC<LangSwitcherProps> = () => {
   return (
     <div className={classNames(cls.LangSwitcher)}>
       <Button onClick={onToggleLang} title={t('langSwitcherBtn')}>
-        <LangIcon fill={theme === Theme.DARK ? '#fff' : '#000'}/>
+        {
+          showIcon ? <LangIcon fill={theme === Theme.DARK ? '#fff' : '#fff'}/> : t('lang')
+        }
       </Button>
     </div>
   )

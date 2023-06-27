@@ -9,3 +9,16 @@
 .secondary {
   color: var(--secondary-color);
 }
+
+.red {
+  color: red;
+}
+
+.sidebarLink {
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
