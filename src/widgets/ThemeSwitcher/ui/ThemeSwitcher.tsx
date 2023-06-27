@@ -6,7 +6,7 @@ import cls from './ThemeSwitcher.module.scss'
 
 import LightOffIcon from 'shared/assets/icons/moon.svg'
 import LightOnIcon from 'shared/assets/icons/sun.svg'
-import { Button, ThemeButton } from 'shared/ui/Button/Button'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 interface ThemeSwitcherProps {
   className?: string
@@ -17,7 +17,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
 
   return (
     <Button
-      theme={ThemeButton.CLEAR}
+      theme={ButtonTheme.CLEAR}
       className={classNames(cls.ThemeSwitcher, {}, [className ?? ''])}
       onClick={toggleTheme}
     >
