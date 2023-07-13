@@ -24,7 +24,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className, showIcon = fals
 
   return (
     <div className={classNames(cls.LangSwitcher)}>
-      <Button onClick={onToggleLang} title={t('langSwitcherBtn')}>
+      <Button onClick={onToggleLang} title={t('langSwitcherBtn')} className={classNames(cls.LangSwitcherBtn)}>
         {
           showIcon ? <LangIcon fill={theme === Theme.DARK ? '#fff' : '#fff'}/> : t('lang')
         }

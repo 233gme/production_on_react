@@ -37,14 +37,14 @@ export const Sidebar: FC<SidebarProps> = ({ className, children }) => {
           to={RoutePath.main}
         >
           <MainIcon/>
-          <span className={cls.link}>{t('navbarLinkMain')}</span>
+          <span className={cls.link}>{t('sidebarLinkMain')}</span>
         </AppLink>
         <AppLink
           theme={AppLinkTheme.SIDEBAR_LINK}
           to={RoutePath.about}
         >
           <AboutIcon/>
-          <span className={cls.link}>{t('navbarLinkAbout')}</span>
+          <span className={cls.link}>{t('sidebarLinkAbout')}</span>
         </AppLink>
       </div>
       <Button

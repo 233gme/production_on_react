@@ -13,7 +13,7 @@ module.exports = {
   parserOptions: {
     project: ['./tsconfig.json']
   },
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   rules: {
     'react/jsx-indent': [2, 2],
     '@typescript-eslint/prefer-includes': 'off',
@@ -23,20 +23,23 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'i18next/no-literal-string': [2, {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to']
+      ignoreAttribute: ['data-testid', 'to', 'fallback']
     }],
     'max-len': [2, {
       code: 120,
       ignoreComments: true
     }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     // REMOVE THIS RULE
     '@typescript-eslint/no-misused-promises': 0,
     '@typescript-eslint/ban-ts-comment': 0
   },
   overrides: [{
-    files: ['**/src/**/*.test.{ts,tsx}'],
+    files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
     rules: {
-      'i18next/no-literal-string': 'off'
+      'i18next/no-literal-string': 'off',
+      'max-len': 'off'
     }
   }]
 }

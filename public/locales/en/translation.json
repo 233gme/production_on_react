@@ -1,9 +1,10 @@
 {
-  "navbarLinkMain": "Main",
-  "navbarLinkAbout": "About",
+  "sidebarLinkMain": "Main",
+  "sidebarLinkAbout": "About",
   "langSwitcherBtn": "RUS",
   "notFoundPage": "Page not found",
   "somethingWentWrong": "Something went wrong",
   "reboot": "Refresh the page",
-  "lang": "РУС"
+  "lang": "РУС",
+  "navbarSingIn": "SingIn"
 }

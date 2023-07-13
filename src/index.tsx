@@ -6,6 +6,7 @@ import { ThemeProvider } from 'app/providers/ThemeProvider'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
 import 'shared/config/i18n/i18n'
+import 'app/styles/index.scss'
 
 render(
   <BrowserRouter>

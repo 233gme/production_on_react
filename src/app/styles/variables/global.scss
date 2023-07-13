@@ -10,11 +10,19 @@
   --font-line-xl: 40px;
   --font-xl: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
-  // Color
+  // Colors
   --white: #fff;
+  --black-alpha: rgb(0 0 0 / 60%);
 
   // Sizes
   --navbar-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 50px;
+
+  // Z Indexes
+  --z-modal: 10;
+
+  // Radius
+  --r-section: 5px;
+  --r-block: 12px;
 }

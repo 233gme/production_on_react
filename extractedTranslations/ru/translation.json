@@ -1,6 +1,7 @@
 {
   "Loading": "",
   "NotFoundPage": "",
+  "SingIn": "",
   "about": "",
   "lang": "",
   "langSwitcherBtn": "",
@@ -8,7 +9,10 @@
   "main": "",
   "navbarLinkAbout": "",
   "navbarLinkMain": "",
+  "navbarSingIn": "",
   "notFoundPage": "",
   "reboot": "",
+  "sidebarLinkAbout": "",
+  "sidebarLinkMain": "",
   "somethingWentWrong": ""
 }

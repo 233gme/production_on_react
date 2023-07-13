@@ -5,6 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 
 export enum ButtonTheme {
   CLEAR = 'clear',
+  CLEAR_INVERTED = 'clear_inverted',
   OUTLINE = 'outline'
 }
 

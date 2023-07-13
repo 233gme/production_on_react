@@ -15,24 +15,30 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  children: 'Text'
+  children: 'Primary'
 }
 
 export const Clear = Template.bind({})
 Clear.args = {
-  children: 'Text',
+  children: 'Clear',
   theme: ButtonTheme.CLEAR
+}
+
+export const ClearInverted = Template.bind({})
+ClearInverted.args = {
+  children: 'ClearInverted',
+  theme: ButtonTheme.CLEAR_INVERTED
 }
 
 export const Outline = Template.bind({})
 Outline.args = {
-  children: 'Text',
+  children: 'Outline',
   theme: ButtonTheme.OUTLINE
 }
 
 export const OutlineDark = Template.bind({})
 OutlineDark.args = {
-  children: 'Text',
+  children: 'OutlineDark',
   theme: ButtonTheme.OUTLINE
 }
 
